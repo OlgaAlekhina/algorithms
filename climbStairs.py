@@ -1,11 +1,11 @@
-def climbStairs(n):
+def climb_stairs(n):
     if n < 4:
         return n
     else:
-        return climbStairs(n-1) + climbStairs(n-2)
+        return climb_stairs(n-1) + climb_stairs(n-2)
 
 
-print(climbStairs(5))
+print(climb_stairs(5))
 
 
 # You are climbing a staircase. It takes n steps to reach the top.

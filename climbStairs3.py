@@ -1,11 +1,11 @@
-def climbStairs(n):
+def climb_stairs(n):
     x, y = 0, 1
     for i in range(n):
         x, y = y, x + y
     return y
 
 
-print(climbStairs(5))
+print(climb_stairs(5))
 
 
 # You are climbing a staircase. It takes n steps to reach the top.

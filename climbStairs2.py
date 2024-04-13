@@ -1,16 +1,16 @@
-def climbStairs(n):
+def climb_stairs(n):
     if n < 4:
         return n
     else:
-        l = [2, 3]
+        var_list = [2, 3]
         i = 4
         while i <= n:
-            l.append(l[-1] + l[-2])
+            var_list.append(var_list[-1] + var_list[-2])
             i += 1
-        return l[-1]
+        return var_list[-1]
 
 
-print(climbStairs(5))
+print(climb_stairs(5))
 
 
 # You are climbing a staircase. It takes n steps to reach the top.
