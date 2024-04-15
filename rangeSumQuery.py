@@ -2,24 +2,19 @@ class NumArray:
 
     def __init__(self, nums):
         self.nums = nums
-        
-    def pref_sum(self):
         len_list = len(self.nums)
         pref_sum = [0] * (len_list + 1)
-        for i in range(1, len_list+1):
+        self.pref_sum = pref_sum
+        for i in range(1, len_list + 1):
             pref_sum[i] = pref_sum[i - 1] + self.nums[i - 1]
-        return pref_sum
 
         
-    def sum_range(self, left, right):
-        pref_sum = self.pref_sum()
-        return pref_sum[right + 1] - pref_sum[left]
+    def sum_range(self, left: int, right: int) -> int:
+        return self.pref_sum[right + 1] - self.pref_sum[left]
 
 
 obj = NumArray([-2, 0, 3, -5, 2, -1])
-print(obj.nums)
-print(obj.pref_sum())
-print(obj.sum_range(0, 5))
+print(obj.sum_range(2, 5))
 
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)

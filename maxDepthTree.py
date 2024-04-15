@@ -10,8 +10,8 @@ class Solution:
     def max_depth(self, root) -> int:
         if not root:
             return 0
-        left_height = self.maxDepth(root.left)
-        right_height = self.maxDepth(root.right)
+        left_height = self.max_depth(root.left)
+        right_height = self.max_depth(root.right)
         if left_height > right_height:
             return left_height + 1
         else:
