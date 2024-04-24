@@ -5,8 +5,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
-    def hasPathSum(self, root, targetSum):
+    def path_sum(self, root, target_sum):
         stack = []
         visited = []
         path_sum = 0
@@ -20,7 +21,7 @@ class Solution:
                 path_sum -= root.val
                 continue
             if not root.left and not root.right:
-                if path_sum == targetSum:
+                if path_sum == target_sum:
                     return True
                 path_sum -= root.val
             elif root.right:
@@ -54,7 +55,7 @@ n3.right = n7
 n7.left = n8
 
 s = Solution()
-print(s.hasPathSum(n1, 7))
+print(s.path_sum(n1, 2))
                 
                 
 
