@@ -29,7 +29,7 @@ class Set:
                 if val_vert != vert:
                     return False
                 i += 1
-                j -= 2
+                j -= 1
 
         return True
 

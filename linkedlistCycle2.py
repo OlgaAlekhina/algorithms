@@ -9,13 +9,9 @@ class Solution:
     def has_cycle(self, head) -> bool:
         cur1 = head
         cur2 = head
-        while cur1 and cur2:
+        while cur2 and cur2.next:
             cur1 = cur1.next
-            cur2 = cur2.next
-            if cur2:
-                cur2 = cur2.next
-            else:
-                return False
+            cur2 = cur2.next.next
             if cur1 == cur2:
                 return True
     
