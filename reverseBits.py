@@ -6,7 +6,7 @@ def reverse_bits(n: int) -> int:
     return int(str_n, base=2)
 
 
-print(reverse_bits(11111111111111111111111111111101))
+print(reverse_bits(0b11111111111111111111111111111101))
 
 # Reverse bits of a given 32 bits unsigned integer.
 #
