@@ -3,11 +3,7 @@ from typing import List
 
 def array_pair_sum(nums: List[int]) -> int:
     nums.sort()
-    max_sum = 0
-    for i in range(0, len(nums) - 1, 2):
-        max_sum += min(nums[i], nums[i + 1])
-
-    return max_sum
+    return sum(nums[0::2])
 
 
 print(array_pair_sum([6,2]))
