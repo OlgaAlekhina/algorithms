@@ -1,16 +1,12 @@
 def pass_pillow(n: int, time: int) -> int:
     div = n - 1
-    if time % (2 * div) == 0:
-        return 1
-    if time % div == 0:
-        return n
     rem = time % (2 * div)
     if rem < div:
         return rem + 1
     return 2 * div - rem + 1
 
 
-print(pass_pillow(9, 16))
+print(pass_pillow(9, 8))
 
 # There are n people standing in a line labeled from 1 to n. The first person in the line is holding a pillow initially. Every second, the person holding the pillow passes it to the next person standing in the line. Once the pillow reaches the end of the line, the direction changes, and people continue passing the pillow in the opposite direction.
 #
