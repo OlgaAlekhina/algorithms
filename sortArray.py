@@ -19,18 +19,14 @@ def sort_array(nums: List[int]) -> List[int]:
             res_list.extend(list2[cur2:])
         return res_list
 
-    def help_func(arr, start, end):
-        l = len(nums)
-        if l == 1:
-            return nums
-        mid = l // 2
-        return merge_lists(sort_array(nums[:mid]), sort_array(nums[mid:]))
+    l = len(nums)
+    if l == 1:
+        return nums
+    mid = l // 2
+    return merge_lists(sort_array(nums[:mid]), sort_array(nums[mid:]))
 
-    return help_func(nums, 0, len(nums) - 1)
 
-        
 print(sort_array([5,1,-5,100,-30,7,2,75,-99,1,2,0,0]))
-
 
 # Given an array of integers nums, sort the array in ascending order and return it.
 #
