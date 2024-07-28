@@ -1,5 +1,4 @@
 from typing import List
-from collections import Counter
 
 
 def morse_representations(words: List[str]) -> int:
@@ -10,9 +9,8 @@ def morse_representations(words: List[str]) -> int:
         for letter in word:
             tr_word += morse_alphabet[ord(letter) - 97]
         transformations.append(tr_word)
-    tr_dict = Counter(transformations)
 
-    return len(tr_dict)
+    return len(set(transformations))
 
 
 print(morse_representations(["gin","zen","gig","msg"]))
