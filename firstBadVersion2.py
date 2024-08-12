@@ -1,30 +1,24 @@
 # The isBadVersion API is already defined for you.
 def is_bad_version(version: int) -> bool:
-    bad_version = 4
+    bad_version = 1150769282
     if version >= bad_version:
         return True
     return False
 
 
 def first_bad_version(n: int) -> bool:
-    def bin_search(start, end, flag):
-        if start == end:
-            if flag:
-                if is_bad_version(start):
-                    return start
-                return start + 1
-            else:
-                return start
-        mid = (end + start) // 2
+    start, end = 1, n
+    while start < end:
+        mid = (start + end) // 2
         if is_bad_version(mid):
-            return bin_search(start, mid, True)
+            end = mid
         else:
-            return bin_search(mid + 1, end, False)
+            start = mid + 1
 
-    return bin_search(1, n, False)
+    return end
 
 
-print(first_bad_version(4))
+print(first_bad_version(1420736637))
 
 # You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 #
