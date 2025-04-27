@@ -12,3 +12,6 @@ def infinity_generator(seq: Iterable):
 
 for i in infinity_generator([1,2,3]):
     print(i)
+
+
+# написать бесконечный генератор, который может принимать любой итерируемый объект
