@@ -6,7 +6,7 @@ def sentence_pangram(sentence: str) -> bool:
     return len(Counter(sentence)) == 26
 
 
-print(sentense_pangram("leetcode"))
+print(sentence_pangram("leetcode"))
 
 # A pangram is a sentence where every letter of the English alphabet appears at least once.
 #
